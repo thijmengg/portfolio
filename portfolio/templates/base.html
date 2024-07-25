@@ -17,9 +17,15 @@
 
     {%endblock%}
 
-    {%block FirstContentBlock%} 
-        Oops, looks like someone forget to put content in this page. Please contact support if this happens to you. 
-    {%endblock%}
+    <div class="FirstPart">
+        {%block FirstContentBlock%} 
+            Oops, looks like someone forget to put content in this page. Please contact support if this happens to you. 
+        {%endblock%}
+    </div>
+    <div class="SecondPart">
+        {%block SecondContentBlock%} 
+        {%endblock%}
+    </div>
     {% comment %} Footer still needs to be made {% endcomment %}
     {%include "footer.html"%}
 </body>

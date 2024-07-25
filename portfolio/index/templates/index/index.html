@@ -4,11 +4,11 @@
 {% block pageTitle%} Home {%endblock%}
 {% comment %} Sets the page title {% endcomment %}
 
-{%block header%} Home {%endblock%}
 {% comment %} Sets the page <h1> tags which every page should have to keep things orderend {% endcomment %}
 
 {% load static%} <!--Always load static in each html-->
 {%block css%} 
+    <link rel="stylesheet" href="{%static "index_styles/index.css"%}">
 {%endblock%}
 {% comment %} Add css files specific for this APP not the project {% endcomment %}
 
@@ -17,10 +17,28 @@
 {% comment %} Below here there should be the page content {% endcomment %}
 
 
+<div class="profilePicture">
+    <img src="{%static "index_img/avatar.svg"%}">
+</div>
+<div class="content">
+    <div class="name">
+        <h1>Thijmen Graat</h1>
+    </div>
+    <div class="description">
+        <p>Hi, I'm Thijmen Graat, a 19 year old student currently attending at the Radboud University. There I study Computing Science. Currently I already completed my first year in which I completed subjects like: Porgramming in C++, Object Orientated Programming, Design and Development and many others.</p>
+        <p>As you might have guessed, one of my hobbies is coding. But another of my hobbies is watching movies and series. I love the Doctor Who series (I already know I'm a nerd ;) ). I love playing a game from time to time. And, you wouldn't say this from a computer scientist, I love spending time with friends. Okay, more often then not we end up in a bar. But we know how to make it a party.</p> 
+        <p>My current residence is in the Netherlands, but I'm planning to travel the world. Therefore if you have any amazing spots I must visit, you can always contact me :). As long as it safe to travel there, I will put it on the list. Countries I already travelled to are: England (London), Italy, Spain (Barcelona, Mallorca), Belgium (Antwerpen), Germany, Greece, Turkey and probably a couple others I'm missing. Still on my to travel list is: Egypt, I would love to see the pyramids there. I'm not a believer myself, but I do facinate about the egyptic gods.</p>
+        <p>Do you have anything interesting to talk about? Or just want to talk with me and others? Feel free to contact me, maybe I'll setup a Discord soon!</p>
+    </div>
+</div>
 
 {% comment %} Custom JavaScript code can be implemented down here at the end of the page {% endcomment %}
 {% comment %} Example: <script src="{% static "[app]_js/[app].js" %}"> </script> - make sure static is loaded at the start of the page{% endcomment %}
 {% comment %} And to add a image you can use the same static as something like: <img src="{% static "[app]_img/img.jpg" %}">{% endcomment %}
 
 
+{%endblock%}
+
+{%block SecondContentBlock%}
+    Second part
 {%endblock%}
